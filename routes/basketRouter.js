@@ -9,7 +9,7 @@ router.delete(
 	authMiddleware,
 	basketController.removeDevice
 )
-router.get('/:basketId', authMiddleware, basketController.getBasket)
+router.get('/:basketId', basketController.getBasket)
 router.delete('/clear/:basketId', authMiddleware, basketController.clearBasket)
 
 module.exports = router
